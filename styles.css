@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-accent: #d87d4a,
+        --color-accent-light: #fbaf85,
+        --color-dark : #121212,
+        --color-shade: #f1f1f1,
+        --color-shade-light: #fafafa,
+        --color-background: #FFFFFF,
+    }
+}
