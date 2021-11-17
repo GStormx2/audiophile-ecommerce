@@ -13,14 +13,12 @@ export default function Home() {
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Header />
       <main>
         <FeaturedProduct />
         <Categories />
         <NewRelease />
         <About />
       </main>
-      <Footer />
     </>
   )
 }

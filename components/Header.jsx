@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
     return (
-        <header className="bg-[#191919] h-[90px]">
+        <header className="absolute top-0 z-20 bg-[#191919] h-[90px] w-full border-b-[1px] border-gray-700">
             <div className="flex justify-between items-center h-full px-6">
                 <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="16" height="3" fill="white"/>
