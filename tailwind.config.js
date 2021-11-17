@@ -21,6 +21,7 @@ module.exports = {
       overline: ["14px", { lineHeight: "19px", letterSpacing: "10px" }],
       subtitle: ["13px", { lineHeight: "25px", letterSpacing: "1px" }],
       body: ["15px", { lineHeight: "25px" }],
+      'showcase-mobile': ['36px', {lineHeight: '40px', letterSpacing: '1.29px'}],
     },
     backgroundColor: {
       skin: {

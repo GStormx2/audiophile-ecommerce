@@ -1,10 +1,10 @@
-import Head from 'next/head'
-import Header from '../components/Header';
-import FeaturedProduct from '../components/FeaturedProduct';
-import Categories from '../components/Categories';
-import NewRelease from '../components/NewReleases';
-import About from '../components/About';
-import Footer from '../components/Footer';
+import Head from "next/head";
+import Header from "../components/Header";
+import FeaturedProduct from "../components/FeaturedProduct";
+import Categories from "../components/Categories";
+import Showcase from "../components/Showcase";
+import About from "../components/About";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -15,10 +15,12 @@ export default function Home() {
       </Head>
       <main>
         <FeaturedProduct />
-        <Categories />
-        <NewRelease />
-        <About />
+        <div className="px-6">
+          <Categories />
+          <Showcase />
+          <About />
+        </div>
       </main>
     </>
-  )
+  );
 }

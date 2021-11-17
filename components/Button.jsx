@@ -10,9 +10,15 @@ const Button = ({ type, children }) => {
         {children}
       </button>
     );
-  } else if (type === "secondary") {
+  } else if (type === "secondary-1") {
     return (
       <button className="h-[48px] w-[160px] bg-[#FFFFFF] text-[#191919] border-2 border-[#191919] text-subtitle font-bold hover:bg-[#191919] hover:text-white uppercase">
+        {children}
+      </button>
+    );
+  } else if (type === "secondary-2") {
+    return (
+      <button className="h-[48px] w-[160px] bg-[#191919] text-white border-2 border-[#191919] text-subtitle font-bold hover:bg-white hover:text-[#191919] uppercase">
         {children}
       </button>
     );
