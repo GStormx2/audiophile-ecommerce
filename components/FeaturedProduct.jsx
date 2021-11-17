@@ -8,12 +8,10 @@ const FeaturedProduct = () => {
   return (
     <section className="relative flex justify-center items-center bg-[#191919]">
       <div className="relative md:hidden">
-        <Image src={headerImageSM} alt="Headphone" >
-          
-        </Image>
+        <Image src={headerImageSM} alt="Headphone"></Image>
       </div>
       <div className="hidden md:block">
-        <Image src={headerImageMD} alt="Headphone"/>
+        <Image src={headerImageMD} alt="Headphone" />
       </div>
       <div className="absolute z-20 left-1/2 md:top-[52%] top-[57%] transform -translate-x-1/2 -translate-y-1/2 text-center">
         <div>
@@ -30,7 +28,6 @@ const FeaturedProduct = () => {
           <Button type={"primary"}>see product</Button>
         </div>
       </div>
-
     </section>
   );
 };
