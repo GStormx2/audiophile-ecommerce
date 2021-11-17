@@ -16,7 +16,7 @@ const Header = () => {
         </div>
         <div className="md:flex md:justify-between md:items-center md:gap-10 hidden">
           <Image className="" src={hamburgerSVG} alt="menu" />
-          <Image src={logoSVG} alt="logo" />  
+          <Image src={logoSVG} alt="logo" />
         </div>
         <Image src={cartSVG} alt="cart" />
       </div>
