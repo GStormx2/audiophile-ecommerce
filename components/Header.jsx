@@ -3,18 +3,22 @@ import React from "react";
 import logoSVG from "../assets/shared/desktop/logo.svg";
 import hamburgerSVG from "../assets/shared/desktop/icon-hamburger.svg";
 import cartSVG from "../assets/shared/desktop/icon-cart.svg";
+import Menu from './Menu';
 
 const Header = () => {
   return (
-    <header className="absolute top-0 z-20 bg-[#191919] h-[90px] w-full border-b-[1px] border-gray-700">
-      <div className="flex justify-between items-center h-full px-6 md:px-10">
+    <header className="absolute left-1/2 top-14 transform -translate-x-1/2 -translate-y-1/2 z-20 h-[90px] w-full max-w-[1200px] border-b-[1px] border-gray-700 lg:h-[100px] lg:px-10">
+      <div className="flex justify-between items-center h-full px-6 md:px-10 lg:px-0">
         <div className="md:hidden block">
           <Image src={hamburgerSVG} alt="menu" />
         </div>
-        <div className="md:hidden block">
+        <div className="md:hidden block lg:block">
           <Image className="md:hidden" src={logoSVG} alt="logo" />
         </div>
-        <div className="md:flex md:justify-between md:items-center md:gap-10 hidden">
+        <div className="hidden lg:block">
+          <Menu />
+        </div>
+        <div className="md:flex md:justify-between md:items-center md:gap-10 hidden lg:hidden">
           <Image className="" src={hamburgerSVG} alt="menu" />
           <Image src={logoSVG} alt="logo" />
         </div>

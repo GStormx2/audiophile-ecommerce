@@ -1,6 +1,8 @@
 import Image from "next/image";
 import React from "react";
-import patternSVG from "../assets/home/desktop/pattern-circles.svg";
+import pattern from "../assets/home/desktop/pattern-circles.svg";
+import patternLG from "../assets/home/desktop/pattern-circles-lg.svg";
+
 import firstSpeakerSM from "../assets/home/mobile/image-speaker-zx9.png";
 import secondSpeakerSM from "../assets/home/mobile/image-speaker-zx7.jpg";
 import earphoneSM from "../assets/home/mobile/image-earphones-yx1.jpg";
@@ -9,16 +11,30 @@ import firstSpeakerMD from '../assets/home/tablet/image-speaker-zx9.png';
 import secondSpeakerMD from "../assets/home/tablet/image-speaker-zx7.jpg";
 import earphoneMD from "../assets/home/tablet/image-earphones-yx1.jpg";
 
+import firstSpeakerLG from '../assets/home/desktop/image-speaker-zx9.png';
+import secondSpeakerLG from '../assets/home/desktop/image-speaker-zx7.jpg';
+import earphoneLG from  "../assets/home/desktop/image-earphones-yx1.jpg";
+
 import Button from "./Button";
 
 const Showcase = () => {
   return (
-    <section className="mt-24">
+    <section className="lg:mt-44 mt-24">
       {/* First Showcase Card */}
-      <div className="md:h-[720px] md:mt- flex justify-center items-end relative h-[600px] bg-[#D87D4A] rounded-lg overflow-hidden">
-        <div className="absolute h-full w-full">
+      <div className="md:h-[720px] flex justify-center items-end relative lg:h-[560px] h-[600px] bg-[#D87D4A] rounded-lg overflow-hidden">
+        {/** for SM + MD pattern */}
+        <div className="block lg:hidden absolute h-full w-full">
           <Image
-            src={patternSVG}
+            src={pattern}
+            alt="circle pattern"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        {/** for LG pattern */}
+        <div className="hidden lg:block absolute h-full w-full">
+          <Image
+            src={patternLG}
             alt="circle pattern"
             layout="fill"
             objectFit="cover"
@@ -33,8 +49,8 @@ const Showcase = () => {
             layout="fixed"
           />
         </div>
-        {/** For MD speaker */}
-        <div className="md:block hidden absolute z-20 left-1/2 top-12 transform -translate-x-1/2 -transform-y-1/2">
+        {/** For 1st MD speaker */}
+        <div className="lg:hidden md:block hidden absolute z-20 left-1/2 top-12 transform -translate-x-1/2 -transform-y-1/2">
           <Image
             src={firstSpeakerMD}
             alt="zx9 speaker"
@@ -43,22 +59,34 @@ const Showcase = () => {
             layout="fixed"
           />
         </div>
-        <div className="absolute">
-          <div className="md:w-[350px] flex flex-col justify-center items-center text-center gap-6 mb-12">
+        {/** For 1st LG speaker */}
+        <div className="lg:block hidden absolute z-20 left-[30%] -bottom-5 transform -translate-x-1/2 -transform-y-1/2">
+          <Image
+            src={firstSpeakerLG}
+            alt="zx9 speaker"
+            width={410.23}
+            height={493}
+            layout="fixed"
+          />
+        </div>
+        <div className="absolute lg:right-[8%] lg:top-[20%]">
+          <div className="sm:w-[280px] md:w-[350px] flex flex-col justify-center items-center text-center lg:text-left gap-6 mb-12">
             <h2 className="md:text-h1 text-showcase-mobile font-bold text-white uppercase mb-1">
-              zx9<br></br>speaker
+              zx9 speaker
             </h2>
-            <p className="md:mb-5 text-body text-white opacity-75">
+            <p className="relative md:mb-5 text-body text-white opacity-75">
               Upgrade to premium speakers that are phenomenally built to deliver
               truly remarkable sound.
             </p>
-            <Button type={"secondary-2"}>see product</Button>
+            <div className="relative lg:absolute lg:left-0 lg:-bottom-5">
+              <Button type={"secondary-2"}>see product</Button>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Second Showcase card */}
-      <div className="relative md:mt-9 h-[320px] mt-6 rounded-lg overflow-hidden">
+      <div className="relative lg:mt-14 md:mt-9 h-[320px] mt-6 rounded-lg overflow-hidden">
         <div className="md:hidden block absolute w-full h-full">
           <Image
             src={secondSpeakerSM}
@@ -76,7 +104,16 @@ const Showcase = () => {
             objectFit="cover"
           />
         </div>
-        <div className="absolute md:left-16 left-6 top-1/2 transform -translte-x-1/2 -translate-y-1/2">
+        {/** for LG 2nd speakers */}
+        <div className="md:block hidden absolute w-full h-full">
+          <Image
+            src={secondSpeakerLG}
+            alt="zx7 speaker"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+        <div className="absolute lg:left-24 md:left-16 left-6 top-1/2 transform -translte-x-1/2 -translate-y-1/2">
           <h3 className="text-h4 text-black font-bold uppercase mb-8">
             zx7 speaker
           </h3>
@@ -85,8 +122,9 @@ const Showcase = () => {
       </div>
 
       {/* Third showcase card*/}
-      <div className="md:mt-9 md:grid-cols-2 md:grid-rows-1 md:gap-3 grid grid-cols-1 grid-rows-2 gap-2 mt-6">
-        <div className="relative md:h-[320px] h-[200px] rounded-lg overflow-hidden">
+      <div className="lg:mt-14 md:mt-9 mt-6 md:grid-cols-2 md:grid-rows-1 md:gap-3 grid grid-cols-1 grid-rows-2 gap-2 lg:gap-7">
+        {/** for SM earphone */}
+        <div className="md:hidden block relative md:h-[320px] h-[200px] rounded-lg overflow-hidden">
           <div className="absolute h-full w-full">
             <Image
               src={earphoneSM}
@@ -96,8 +134,30 @@ const Showcase = () => {
             />
           </div>
         </div>
+        {/** for MD earphone */}
+        <div className="hidden lg:hidden md:block relative md:h-[320px] h-[200px] rounded-lg overflow-hidden">
+          <div className="absolute h-full w-full">
+            <Image
+              src={earphoneMD}
+              alt="yx1 earphones"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </div>
+        {/** for LG earphone */}
+        <div className="hidden lg:block relative md:h-[320px] h-[200px] rounded-lg overflow-hidden">
+          <div className="absolute h-full w-full">
+            <Image
+              src={earphoneLG}
+              alt="yx1 earphones"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </div>
         <div className="relative md:h-[320px] h-[200px] bg-[#F1F1F1] rounded-lg">
-          <div className="absolute md:left-10 left-6 top-1/2 transform -translte-x-1/2 -translate-y-1/2">
+          <div className="absolute lg:left-[17%] md:left-10 left-6 top-1/2 transform -translte-x-1/2 -translate-y-1/2">
             <h3 className="text-h4 text-black font-bold uppercase mb-8">
               yx1 earphones
             </h3>

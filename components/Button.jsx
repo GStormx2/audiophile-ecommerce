@@ -18,7 +18,7 @@ const Button = ({ type, children }) => {
     );
   } else if (type === "secondary-2") {
     return (
-      <button className="h-[48px] w-[160px] bg-[#191919] text-white border-2 border-[#191919] text-subtitle font-bold hover:bg-white hover:text-[#191919] uppercase">
+      <button className="h-[48px] w-[160px] bg-[#191919] text-white border-2 border-[#191919] text-subtitle font-bold hover:bg-[#ffffff] hover:text-[#191919] uppercase">
         {children}
       </button>
     );

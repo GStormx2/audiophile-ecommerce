@@ -7,13 +7,14 @@ import Button from "./Button";
 
 // headphone - 1.04 : 1
 // speaker - 1.07 : 1
-// earphone - 1.15 : 1
+// earphone - 1.15 : 1 w-[327px] h-[165px] lg:w-[350] lg:h-[204px]
 
-const Categories = () => {
+const TestCategories = () => {
   return (
-    <section className="md:flex-row md:gap-3 md:mt-32 flex flex-col justify-center items-center gap-16 mt-24">
-      <div className="relative flex items-end justify-center bg-[#F2F2F2] w-[327px] h-[165px] rounded-lg">
-        <div className="absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
+    <section className="top-0 md:gap-3 lg:gap-8 md:mt-32 grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-16 mt-24 lg:pt-24">
+      <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
+        {/**headphone small */}
+        <div className="block lg:hidden absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
           <Image
             src={headphonePNG}
             width={146}
@@ -22,15 +23,26 @@ const Categories = () => {
             layout="fixed"
           />
         </div>
-        <div className="flex flex-col justify-between gap-2.5 items-center mb-5">
-          <p className="text-body font-bold tracking-[1.07px] uppercase">
+        {/**headphone large */}
+        <div className="hidden lg:block absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
+          <Image
+            src={headphonePNG}
+            width={188}
+            height={180}
+            alt="headphone shop now"
+            layout="fixed"
+          />
+        </div>
+        <div className="flex flex-col justify-between gap-2.5 lg:gap-5 items-center mb-5 lg:mb-10">
+          <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             headphones
           </p>
           <Button type={"ternary"}>shop</Button>
         </div>
       </div>
-      <div className="relative flex items-end justify-center bg-[#F2F2F2] w-[327px] h-[165px] rounded-lg">
-        <div className="absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
+        {/** speaker small */}
+        <div className="lg:hidden block absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
           <Image
             className="absolute z-10"
             src={speakerPNG}
@@ -40,15 +52,27 @@ const Categories = () => {
             layout="fixed"
           />
         </div>
-        <div className="flex flex-col justify-between gap-2.5 items-center mb-5">
-          <p className="text-body font-bold tracking-[1.07px] uppercase">
+        {/** speaker large */}
+        <div className="hidden lg:block absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
+          <Image
+            className="absolute z-10"
+            src={speakerPNG}
+            width={193}
+            height={180}
+            alt="speakers shop now"
+            layout="fixed"
+          />
+        </div>
+        <div className="flex flex-col justify-between gap-2.5 lg:gap-5 items-center mb-5 lg:mb-10">
+          <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             speakers
           </p>
           <Button type={"ternary"}>shop</Button>
         </div>
       </div>
-      <div className="relative flex items-end justify-center bg-[#F2F2F2] w-[327px] h-[165px] rounded-lg">
-        <div className="absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
+        {/** earphone small */}
+        <div className="block lg:hidden absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
           <Image
             className="absolute z-10"
             src={earphonePNG}
@@ -58,8 +82,19 @@ const Categories = () => {
             layout="fixed"
           />
         </div>
-        <div className="flex flex-col justify-between gap-2.5 items-center mb-5">
-          <p className="text-body font-bold tracking-[1.07px] uppercase">
+        {/** earphone large */}
+        <div className="hidden lg:block absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
+          <Image
+            className="absolute z-10"
+            src={earphonePNG}
+            width={218.5}
+            height={190}
+            alt="earphones show now"
+            layout="fixed"
+          />
+        </div>
+        <div className="flex flex-col justify-between gap-2.5 lg:gap-5 items-center mb-5 lg:mb-10">
+          <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             earphones
           </p>
           <Button type={"ternary"}>shop</Button>
@@ -68,4 +103,4 @@ const Categories = () => {
     </section>
   );
 };
-export default Categories;
+export default TestCategories;
