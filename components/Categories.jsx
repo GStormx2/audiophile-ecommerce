@@ -11,7 +11,7 @@ import Button from "./Button";
 
 const Categories = () => {
   return (
-    <section className="md:flex-row md:px-8 md:gap-5 flex flex-col justify-center items-center gap-16 mt-24">
+    <section className="md:flex-row md:gap-3 md:mt-32 flex flex-col justify-center items-center gap-16 mt-24">
       <div className="relative flex items-end justify-center bg-[#F2F2F2] w-[327px] h-[165px] rounded-lg">
         <div className="absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
           <Image

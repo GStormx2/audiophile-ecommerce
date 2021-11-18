@@ -19,8 +19,8 @@ module.exports = {
       h4: ["28px", { lineHeight: "36px", letterSpacing: "2px" }],
       h6: ["18px", { lineHeight: "24px", letterSpacing: "1.13px" }],
       overline: ["14px", { lineHeight: "19px", letterSpacing: "10px" }],
-      subtitle: ["13px", { lineHeight: "25px", letterSpacing: "1px" }],
-      body: ["15px", { lineHeight: "25px" }],
+      subtitle: ["13px", { lineHeight: "25px", letterSpacing: "2px" }],
+      body: ["16px", { lineHeight: "25px" }],
       'showcase-mobile': ['36px', {lineHeight: '40px', letterSpacing: '1.29px'}],
     },
     backgroundColor: {

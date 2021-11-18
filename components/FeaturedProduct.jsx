@@ -13,7 +13,7 @@ const FeaturedProduct = () => {
       <div className="hidden md:block">
         <Image src={headerImageMD} alt="Headphone" />
       </div>
-      <div className="absolute z-20 left-1/2 md:top-[52%] top-[57%] transform -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="absolute md:w-[400px] z-20 left-1/2 md:top-[52%] top-[57%] transform -translate-x-1/2 -translate-y-1/2 text-center">
         <div>
           <p className="text-overline text-white opacity-[49.64%] mb-4 uppercase">
             new product
