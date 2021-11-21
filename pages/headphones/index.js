@@ -1,11 +1,12 @@
 import Head from "next/head";
-import FeaturedProduct from "../../components/FeaturedProduct";
+import { db } from "../../firebase";
+import { collection, query, getDocs } from "firebase/firestore";
 import Categories from "../../components/Categories";
-import Showcase from "../../components/Showcase";
 import About from "../../components/About";
-import { ProductCard } from "../../components/ProductCard";
+import ProductCard from "../../components/ProductCard";
+//import ProductCard from "../../components/ProductCard";
 
-export default function Home() {
+export default function Headphones({ headphones }) {
   return (
     <>
       <Head>
@@ -24,15 +25,29 @@ export default function Home() {
           </header>
           {/* content body */}
           <div className="px-6 md:px-9 lg:px-0">
-           {/* product cards go here */}
-           <section className="mb-40">
-             <ProductCard />
-           </section>
-           <Categories />
-           <About />
+            {/* product cards go here */}
+            <section className="mb-40">
+              {headphones.map((item) => {
+                return <ProductCard key={item.slug}>{item}</ProductCard>;
+              })}
+            </section>
+            <Categories />
+            <About />
           </div>
         </div>
       </main>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const headphones = [];
+  const q = query(collection(db, "headphones"));
+  const querySnapshot = await getDocs(q);
+  querySnapshot.forEach((val) => {
+    headphones.push(val.data());
+  });
+  return {
+    props: { headphones: headphones },
+  };
 }
