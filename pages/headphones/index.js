@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { db } from "../../firebase";
+import { db, storage } from "../../firebase";
 import { collection, query, getDocs } from "firebase/firestore";
+import { ref, getDownloadURL } from "firebase/storage";
 import Categories from "../../components/Categories";
 import About from "../../components/About";
 import ProductCard from "../../components/ProductCard";
-//import ProductCard from "../../components/ProductCard";
 
-export default function Headphones({ headphones }) {
+export default function Headphones({ headphones, images }) {
   return (
     <>
       <Head>
@@ -42,12 +42,16 @@ export default function Headphones({ headphones }) {
 
 export async function getStaticProps() {
   const headphones = [];
+
   const q = query(collection(db, "headphones"));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((val) => {
     headphones.push(val.data());
   });
+
   return {
-    props: { headphones: headphones },
+    props: {
+      headphones: headphones,
+    },
   };
 }
