@@ -23,16 +23,6 @@ module.exports = {
       body: ["16px", { lineHeight: "25px" }],
       'showcase-mobile': ['36px', {lineHeight: '40px', letterSpacing: '1.29px'}],
     },
-    backgroundColor: {
-      skin: {
-        accent: "var(--color-accent)",
-        "accent-light": "var(--color-accent-light)",
-        dark: "var(--color-dark)",
-        shade: "var(--color-shade)",
-        "shade-light": "var(--color-shade-light)",
-        background: "var(--color-background)",
-      },
-    },
     extend: {},
   },
   variants: {
