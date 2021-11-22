@@ -6,7 +6,7 @@ import imageBestGearLG from "../assets/shared/desktop/image-best-gear.jpg";
 
 const About = () => {
   return (
-    <section className="lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:items-center flex flex-col gap-7 my-32 justify-center">
+    <section className="lg:grid lg:grid-cols-2 lg:grid-rows-1 lg:items-center flex flex-col gap-7 my-32 lg:my-52 justify-center">
       {/* for LG */}
       <div className="hidden lg:block h-[588px] order-2">
         <Image src={imageBestGearLG} className="rounded-lg w-full"></Image>
@@ -19,8 +19,9 @@ const About = () => {
       <div className="hidden md:block lg:hidden">
         <Image src={imageBestGearMD} className="rounded-lg w-full"></Image>
       </div>
-      <div className="text-center lg:order-1">
-        <p className="mb-7 text-h4 font-bold uppercase">
+      {/* text block */}
+      <div className="text-center lg:order-1 lg:w-[445px] lg:text-left">
+        <p className="mb-7 text-h4 lg:text-h2 font-bold uppercase">
           Bringing you the <span className="text-[#D87D4A]">best</span> audio
           gear
         </p>
