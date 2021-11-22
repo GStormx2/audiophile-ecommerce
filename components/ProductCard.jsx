@@ -3,8 +3,6 @@ import React from "react";
 import Button from "./Button";
 import { makeUrl } from "../cloudinary_builder";
 
-import img from "../assets/product-xx59-headphones/mobile/image-category-page-preview.jpg";
-
 export const ProductCard = ({ children }) => {
   return (
     <div className="relative flex flex-col justify-center gap-8 md:gap-14 mt-16 mb-5 md:mt-32">
