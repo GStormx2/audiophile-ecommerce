@@ -11,7 +11,7 @@ import Button from "./Button";
 
 const TestCategories = () => {
   return (
-    <section className="top-0 md:gap-3 lg:gap-8 md:mt-32 grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-16 mt-24 lg:pt-24">
+    <section className="top-0 md:gap-3 lg:gap-8 md:mt-32 lg:mt-56 grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-16 mt-24">
       <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
         {/**headphone small */}
         <div className="block lg:hidden absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
