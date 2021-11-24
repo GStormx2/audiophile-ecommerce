@@ -5,18 +5,18 @@ import Categories from "../../components/Categories";
 import About from "../../components/About";
 import ProductCard from "../../components/ProductCard";
 
-export default function Headphones({ headphones, images }) {
+export default function Earphones({ earphones, images }) {
   return (
     <>
       <Head>
-        <title>Headphones</title>
+        <title>Earphones</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* main children container */}
       <div className="relative h-[105px] lg:h-[246px] bg-[#191919]">
-          {/* "headphones title" */}
+          {/* "earphopnes title" */}
           <h1 className="absolute left-1/2 bottom-7 lg:bottom-0 lg:top-[40%] lg:left-[50%] transform -translate-x-1/2 -transform-y-1/2 text-center text-white text-h4 lg:text-h2 font-bold px-8 uppercase">
-            headphones
+            earphones
           </h1>
         </div>
       <main className="relative lg:flex lg:justify-center lg:items-center overflow-x-hidden">
@@ -26,11 +26,11 @@ export default function Headphones({ headphones, images }) {
           <div className="px-6 md:px-9 lg:px-0">
             {/* product cards go here */}
             <section className="mb-40">
-              {headphones.map((item, index) => {
+              {earphones.map((item, index) => {
                 if ((index + 1) % 2 == 0) {
-                  return <ProductCard type={"headphones"} order={"first"} key={item.slug}>{item}</ProductCard>
+                  return <ProductCard type={"earphones"} order={"first"} key={item.slug}>{item}</ProductCard>
                 }
-                return <ProductCard type={"headphones"} order={"none"} key={item.slug}>{item}</ProductCard>;
+                return <ProductCard type={"earphones"} order={"none"} key={item.slug}>{item}</ProductCard>;
               })}
             </section>
             <div className="mt-24 md:mt-32">
@@ -45,17 +45,17 @@ export default function Headphones({ headphones, images }) {
 }
 
 export async function getStaticProps() {
-  const headphones = [];
+  const earphones = [];
 
-  const q = query(collection(db, "headphones"));
+  const q = query(collection(db, "earphones"));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((val) => {
-    headphones.push(val.data());
+    earphones.push(val.data());
   });
 
   return {
     props: {
-      headphones: headphones,
+      earphones: earphones,
     },
   };
 }

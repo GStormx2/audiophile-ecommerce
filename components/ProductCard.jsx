@@ -6,7 +6,7 @@ import React from "react";
 import Button from "./Button";
 import { makeUrl } from "../cloudinary_builder";
 
-export const ProductCard = ({ order, children }) => {
+export const ProductCard = ({ type, order, children }) => {
   return (
     <div className="relative lg:grid lg:grid-cols-2 lg:grid-rows-1 flex flex-col justify-center lg:items-center gap-8 md:gap-14 lg:gap-24 mt-16 mb-5 md:mt-32 lg:mt-40">
       {/* mobile */}
@@ -49,14 +49,14 @@ export const ProductCard = ({ order, children }) => {
             (children.new === false ? "hidden" : "block")
           }
         >
-          new product
+          NEW PRODUCT
         </p>
         <p className="text-h4 md:text-h2 md:px-24 lg:px-0 font-bold uppercase mt-5">
           {children.name}
         </p>
         <p className="mt-5 text-black opacity-70">{children.description}</p>
         <div className="mt-6 lg:mt-12">
-          <Button link={`/${children.slug}`} type={"primary"}>
+          <Button link={`/${type}/${children.slug}`} type={"primary"}>
             see prodcut
           </Button>
         </div>

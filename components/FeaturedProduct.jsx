@@ -7,7 +7,7 @@ import headerImageLG from '../assets/home/desktop/image-hero.jpg';
 
 const FeaturedProduct = () => {
   return (
-    <section className="relative flex justify-center items-center bg-[#191919]">
+    <section className="relative flex justify-center items-center bg-[#191919] mb-24 md:mb-32 lg:mb-52">
       {/** Small screen image*/}
       <div className="relative md:hidden lg:hidden">
         <Image src={headerImageSM} alt="Headphone"></Image>
@@ -32,7 +32,7 @@ const FeaturedProduct = () => {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast
           </p>
-          <Button type={"primary"}>see product</Button>
+          <Button link={"/headphones/xx99-mark-two-headphones"} type={"primary"}>see product</Button>
         </div>
       </div>
     </section>

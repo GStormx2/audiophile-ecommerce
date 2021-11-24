@@ -22,6 +22,7 @@ module.exports = {
       subtitle: ["13px", { lineHeight: "25px", letterSpacing: "2px" }],
       body: ["16px", { lineHeight: "25px" }],
       'showcase-mobile': ['36px', {lineHeight: '40px', letterSpacing: '1.29px'}],
+      'features-mobile': ['24px', {lineHeight: '36px', letterSpacing: '0.86px'}],
     },
     extend: {},
   },

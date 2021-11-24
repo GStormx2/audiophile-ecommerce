@@ -11,7 +11,7 @@ import Button from "./Button";
 
 const TestCategories = () => {
   return (
-    <section className="top-0 md:gap-3 lg:gap-8 md:mt-32 lg:mt-56 grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-16 mt-24">
+    <section className="md:gap-3 lg:gap-8 grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-16">
       <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
         {/**headphone small */}
         <div className="block lg:hidden absolute left-1/2 top-5 transform -translate-x-1/2 -translate-y-1/2">
@@ -37,7 +37,7 @@ const TestCategories = () => {
           <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             headphones
           </p>
-          <Button type={"ternary"}>shop</Button>
+          <Button link={"/headphones"} type={"ternary"}>shop</Button>
         </div>
       </div>
       <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
@@ -67,7 +67,7 @@ const TestCategories = () => {
           <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             speakers
           </p>
-          <Button type={"ternary"}>shop</Button>
+          <Button link={"/headphones"} type={"ternary"}>shop</Button>
         </div>
       </div>
       <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
@@ -97,7 +97,7 @@ const TestCategories = () => {
           <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             earphones
           </p>
-          <Button type={"ternary"}>shop</Button>
+          <Button link={"/headphones"} type={"ternary"}>shop</Button>
         </div>
       </div>
     </section>

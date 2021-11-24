@@ -6,7 +6,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <div className="relative lg:block w-screen max-w-full bg-[#191919] lg:h-[90px] h-[90px] overflow-hidden">
+      <div className="relative lg:block w-screen max-w-full bg-[#191919] lg:h-[100px] h-[100px] overflow-hidden">
         
       </div>
       <main>{children}</main>

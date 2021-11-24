@@ -65,7 +65,7 @@ export default function Items({ product }) {
 
 export async function getStaticPaths() {
   const paths = [];
-  const q = query(collection(db, "headphones"));
+  const q = query(collection(db, "speakers"));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((item) => {
     paths.push({
@@ -84,7 +84,7 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
   const slug = context.params.slug;
   let product;
-  const q = query(collection(db, "headphones"), where("slug", "==", slug));
+  const q = query(collection(db, "speakers"), where("slug", "==", slug));
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((item) => {
     product = item.data();

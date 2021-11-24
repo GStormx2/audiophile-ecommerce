@@ -79,7 +79,7 @@ const Showcase = () => {
               truly remarkable sound.
             </p>
             <div className="relative lg:absolute lg:left-0 lg:-bottom-5">
-              <Button type={"secondary-2"}>see product</Button>
+              <Button link={"/speakers/zx9-speaker"} type={"secondary-2"}>see product</Button>
             </div>
           </div>
         </div>
@@ -117,7 +117,7 @@ const Showcase = () => {
           <h3 className="text-h4 text-black font-bold uppercase mb-8">
             zx7 speaker
           </h3>
-          <Button type={"secondary-1"}>see product</Button>
+          <Button link={"/speakers/zx7-speakers"} type={"secondary-1"}>see product</Button>
         </div>
       </div>
 
@@ -161,7 +161,7 @@ const Showcase = () => {
             <h3 className="text-h4 text-black font-bold uppercase mb-8">
               yx1 earphones
             </h3>
-            <Button type={"secondary-1"}>see product</Button>
+            <Button link={"/earphones/yx1-earphones"} type={"secondary-1"}>see product</Button>
           </div>
         </div>
       </div>

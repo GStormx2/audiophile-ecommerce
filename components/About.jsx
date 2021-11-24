@@ -20,8 +20,8 @@ const About = () => {
         <Image src={imageBestGearMD} className="rounded-lg w-full"></Image>
       </div>
       {/* text block */}
-      <div className="text-center lg:order-1 lg:w-[445px] lg:text-left">
-        <p className="mb-7 text-h4 lg:text-h2 font-bold uppercase">
+      <div className="text-center lg:order-1 md:w-[573px] mx-auto lg:w-[445px] lg:text-left">
+        <p className="mb-7 text-h4 md:text-h2 font-bold uppercase">
           Bringing you the <span className="text-[#D87D4A]">best</span> audio
           gear
         </p>
