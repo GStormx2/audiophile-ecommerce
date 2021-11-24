@@ -5,8 +5,9 @@ import Footer from './Footer';
 export const Layout = ({ children }) => {
   return (
     <>
-      <div className="absolute lg:block w-screen max-w-full bg-[#191919] h-[106px] overflow-hidden">
-        <Header />
+      <Header />
+      <div className="relative lg:block w-screen max-w-full bg-[#191919] lg:h-[90px] h-[90px] overflow-hidden">
+        
       </div>
       <main>{children}</main>
       <div className="relative lg:grid lg:justify-center lg:items-center bg-[#191919] overflow-x-hidden">

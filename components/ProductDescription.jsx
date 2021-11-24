@@ -10,17 +10,19 @@ import Button from './Button';
 const ProductDescription = ({ children }) => {
   return (
     <div>
+      {/* container for image, description and buttons */}
+      <div>
         {/* mobile */}
-        <div className="relative block md:hidden w-full h-[352px] bg-[#f1f1f1]">
-          <Image src={makeUrl(children.image.mobile)} alt={children.name}/>
+        <div className="relative block md:hidden w-full h-[327px] bg-[#f1f1f1]">
+          <Image className="object-contain" src={makeUrl(children.image.mobile)} alt={children.name} layout="fill"/>
         </div>
         {/* tablet */}
-        <div className="relative hidden md:block lg:hidden h-[352px] bg-[#f1f1f1]">
-          <Image src={makeUrl(children.image.tablet)} alt={children.name}/>
+        <div className="relative hidden md:block lg:hidden h-[480px] bg-[#f1f1f1]">
+          <Image className="object-contain" src={makeUrl(children.image.tablet)} alt={children.name} layout="fill"/>
         </div>
         {/* desktop */}
-        <div className="relative hidden lg:block">
-          <Image src={makeUrl(children.image.desktop)} alt={children.name}/>
+        <div className="relative hidden lg:block lg:h-[560px]">
+          <Image className="object-contain" src={makeUrl(children.image.desktop)} alt={children.name} layout="fill"/>
         </div>
         <p
           className={
@@ -37,7 +39,10 @@ const ProductDescription = ({ children }) => {
           <Counter />
           <Button type={"primary"}>add to cart</Button>
         </div>
+      </div>
+      <div>
         <p></p>
+      </div>
     </div>
   );
 }

@@ -13,9 +13,9 @@ export default function Headphones({ headphones, images }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* main children container */}
-      <div className="relative h-[195px] lg:h-[336px] bg-[#191919]">
+      <div className="relative h-[105px] lg:h-[246px] bg-[#191919]">
           {/* "headphones title" */}
-          <h1 className="absolute left-1/2 bottom-7 lg:bottom-0 lg:top-[60%] lg:left-[50%] transform -translate-x-1/2 -transform-y-1/2 text-center text-white text-h4 lg:text-h2 font-bold px-8 uppercase">
+          <h1 className="absolute left-1/2 bottom-7 lg:bottom-0 lg:top-[40%] lg:left-[50%] transform -translate-x-1/2 -transform-y-1/2 text-center text-white text-h4 lg:text-h2 font-bold px-8 uppercase">
             headphones
           </h1>
         </div>

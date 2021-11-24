@@ -7,7 +7,7 @@ import Menu from './Menu';
 
 const Header = () => {
   return (
-    <header className="absolute left-1/2 top-14 transform -translate-x-1/2 -translate-y-1/2 z-20 h-[90px] w-full max-w-[1200px] border-b-[1px] border-gray-700 lg:h-[100px] lg:px-10">
+    <header className="absolute left-1/2 top-12 transform -translate-x-1/2 -translate-y-1/2 z-20 h-[90px] w-full max-w-[1200px] lg:h-[100px] lg:px-10">
       <div className="flex justify-between items-center h-full px-6 md:px-10 lg:px-0">
         {/* hamburger icon */}
         <div className="md:hidden block">
@@ -30,6 +30,7 @@ const Header = () => {
         {/* cart logo */}
         <Image src={cartSVG} alt="cart" />
       </div>
+      <div className="bg-[#f1f1f1] w-full max-w-[1200px] h-[1px] opacity-50"></div>
     </header>
   );
 };
