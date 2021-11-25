@@ -9,7 +9,7 @@ import Button from "./Button";
 // speaker - 1.07 : 1
 // earphone - 1.15 : 1 w-[327px] h-[165px] lg:w-[350] lg:h-[204px]
 
-const TestCategories = () => {
+const Categories = () => {
   return (
     <section className="md:gap-3 lg:gap-8 grid grid-rows-3 grid-cols-1 md:grid-cols-3 md:grid-rows-1 justify-center items-center gap-16">
       <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
@@ -67,7 +67,7 @@ const TestCategories = () => {
           <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             speakers
           </p>
-          <Button link={"/headphones"} type={"ternary"}>shop</Button>
+          <Button link={"/speakers"} type={"ternary"}>shop</Button>
         </div>
       </div>
       <div className="relative flex items-end justify-center bg-[#F2F2F2] h-[165px] lg:h-[204px] rounded-lg">
@@ -97,10 +97,10 @@ const TestCategories = () => {
           <p className="lg:text-h6 text-body font-bold tracking-[1.07px] uppercase">
             earphones
           </p>
-          <Button link={"/headphones"} type={"ternary"}>shop</Button>
+          <Button link={"/earphones"} type={"ternary"}>shop</Button>
         </div>
       </div>
     </section>
   );
 };
-export default TestCategories;
+export default Categories;
