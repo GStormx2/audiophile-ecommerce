@@ -1,29 +1,34 @@
-# Next.js + Tailwind CSS Example
+# Frontend Mentor - Audiphole Ecommerce Website Solution
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+This is a solution to the [Audiophile Ecommerce challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx). 
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
+## Table of contents
 
-## Preview
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Features left](#features-left)
+  - [What I learned](#what-i-learned)
 
-Preview the example live on [StackBlitz](http://stackblitz.com/):
+# Overview
+## Screenshot
+![Homepage](screenshot.png)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+# My Process
+## Built with
+- NextJS (React Framework for SSR)
+- TailwindCSS (Utility-first CSS framework)
+- Firestore Database (NOSQL firebase dataabse)
+- Cloudinary (for image storage)
 
-## Deploy your own
+## What I learned
+- NextJS and the power of server-side rendering (SSR). I learned about NextJS **Dynamic Routing** and used it to build product pages under certain cagetories. For example: `/pages/headphones/[slug].js`
+- `getStaticPaths` inside the `[slug].js` files queries firebase database to find list of products and statically pre-renders the dynamic routes based on the products available. Because data is available during build time, I used `getStaticProps` to generate the dynamic pages based on `paths`. This function runs only on server side.
+- I wanted to experiment with quering from multiple sources of data. Thats why all the images are stored in Cloudinary and product data comes from Firebase. I have used NextJS `next/image` **Image Optimizations** for faster page loading.
+- It was very fun building the website with TailwindCSS with mobile-first approach. There are so many images and the structure of the page change drastically depending on device screen space. I have used resized images for tablet/mobile/desktop sizes, combined with `next/image` optimizations to make laoding time faster.
+- NextJS provides so much more features and I would love to make more projects with this framework.
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+## Features left to implement
+- Cart to add products
+- Checkout page
