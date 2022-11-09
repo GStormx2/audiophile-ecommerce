@@ -2,10 +2,12 @@ import Image from "next/image";
 import React from "react";
 import logoSVG from "../assets/shared/desktop/logo.svg";
 import hamburgerSVG from "../assets/shared/desktop/icon-hamburger.svg";
-import cartSVG from "../assets/shared/desktop/icon-cart.svg";
+
 import Menu from './Menu';
+import CartBox from "./CartBox";
 
 const Header = () => {
+  
   return (
     <header className="absolute left-1/2 top-12 transform -translate-x-1/2 -translate-y-1/2 z-20 h-[90px] w-full max-w-[1200px] lg:h-[100px] lg:px-10">
       <div className="flex justify-between items-center h-full px-6 md:px-10 lg:px-0">
@@ -28,7 +30,7 @@ const Header = () => {
           <Image src={logoSVG} alt="logo" />
         </div>
         {/* cart logo */}
-        <Image src={cartSVG} alt="cart" />
+        <CartBox/>
       </div>
       <div className="bg-[#f1f1f1] w-full max-w-[1200px] h-[1px] opacity-50"></div>
     </header>
